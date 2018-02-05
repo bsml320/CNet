@@ -29,7 +29,7 @@ If permutation is turned on, a file named output.modules.withZ.txt will be gener
 
 > java -jar /path/to/CNet.jar
 
-...
+```
 usage: java CNet <model=glm|km|chisq|FET> 
         <X=Xfile> 
         <Y=Yfile> 
@@ -40,7 +40,7 @@ usage: java CNet <model=glm|km|chisq|FET>
         <exclude=exclude_gene_file>
         <permutation={true|false}>
         <keep_permutation={true|false}>
-...
+```
 
 ### 2. One predictor matrix:
 
