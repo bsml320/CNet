@@ -30,7 +30,7 @@ If permutation is turned on, a file named output.modules.withZ.txt will be gener
 > java -jar /path/to/CNet.jar
 
 ```
-usage: java CNet <model=glm|km|chisq|FET> 
+usage: java -jar CNet.jar <model=glm|km|chisq|FET> 
         <X=Xfile> 
         <Y=Yfile> 
         <net=networkfile>
