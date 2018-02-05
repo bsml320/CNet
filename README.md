@@ -7,7 +7,7 @@ Input files that should be prepared
 3. net: Network file: a file with 2 columns, each row with a pair of genes, space seperated. Alternatively, use the label "net=full" to refer a fully connected network.
 
 Other input parameters:
-4. model=glm|km|chisq
+4. model={glm|km|chisq}
 5. r_include=0.2
 6. r_exclude=0.1
 7. output=output.modules.txt
