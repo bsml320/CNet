@@ -1,5 +1,6 @@
 CNet: discovery of clinically associated, combinatory genomic signatures
-CNet detects groups of genomic signatures that are associated with clinical and phenotypical outcomes.
+
+CNet is a JAR package that detects groups of genomic signatures that are associated with clinical and phenotypical outcomes.
 
 Input files that should be prepared
 1. X: Predictor profile matrices: formatted as samples by genes, with only 0 and 1 allowed (i.e., binary matrix). Space seperated. 
