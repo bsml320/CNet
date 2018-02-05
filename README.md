@@ -10,11 +10,11 @@ Input files that should be prepared
 
 Other input parameters:
 
-4. model={glm|km|chisq}
-5. r_include=0.2
-6. r_exclude=0.1
+4. model={glm|km|chisq|FET}: no default value; users must select one of the four models according to their phenotype.
+5. r_include=0.2: default: 0.2; suggest to be a value between 0.2 and 0.5
+6. r_exclude=0.1: default: 0.1; suggest to be half of the value r_include
 7. output=output.modules.txt
-8. exclude: a file that excludes a list of genes, one gene per line. Default: no gene is excluded.
+8. exclude: a file that includes a list of genes to be excluded, one gene per row. Default: no gene is excluded.
 9. permutation={true|false}:
 10. keep_permutation={true|false}: whether to keep the intermediate permutation files
 
@@ -28,7 +28,7 @@ Example
 1. Default
 
 java -jar /home/pjia/code/CNet.jar
-usage: java CNet <model=glm|km|chisq>
+usage: java CNet <model=glm|km|chisq|FET>
         <X=Xfile>
         <Y=Yfile>
         <net=networkfile>
@@ -38,6 +38,7 @@ usage: java CNet <model=glm|km|chisq>
         <exclude=exclude_gene_file>
         <permutation={true|false}>
         <keep_permutation={true|false}>
+
 2. One predictor matrix:
 
 java -jar /path/to/code/CNet.jar model=chisq \
@@ -50,6 +51,7 @@ java -jar /path/to/code/CNet.jar model=chisq \
           permutation=true \
           keep_permutation=false \
           2>log
+
 3. Two predictor matrices:
 
 java -jar /home/pjia/code/CNet.jar model=chisq \
