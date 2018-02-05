@@ -3,11 +3,13 @@ CNet: discovery of clinically associated, combinatory genomic signatures
 CNet is a JAR package that detects groups of genomic signatures that are associated with clinical and phenotypical outcomes.
 
 Input files that should be prepared
+
 1. X: Predictor profile matrices: formatted as samples by genes, with only 0 and 1 allowed (i.e., binary matrix). Space seperated. 
 2. Y: Phenotype file: a file with 2 columns (continuous or categorical phenotype) or 3 columns (censored data)
 3. net: Network file: a file with 2 columns, each row with a pair of genes, space seperated. Alternatively, use the label "net=full" to refer a fully connected network.
 
 Other input parameters:
+
 4. model={glm|km|chisq}
 5. r_include=0.2
 6. r_exclude=0.1
@@ -17,11 +19,14 @@ Other input parameters:
 10. keep_permutation={true|false}: whether to keep the intermediate permutation files
 
 Output file
+
 If permutation is turned off (permutation=false), a file named output.modules.txt will be generated, with 5 columns: seed_gene, module_score, component_genes, tags, z_score
+
 If permutation is turned on, a file named output.modules.withZ.txt will be generated, with 6 columns: seed_gene, module_score, component_genes, tags, z_score, z_score2
 
 Example
 1. Default
+
 java -jar /home/pjia/code/CNet.jar
 usage: java CNet <model=glm|km|chisq>
         <X=Xfile>
@@ -34,6 +39,7 @@ usage: java CNet <model=glm|km|chisq>
         <permutation={true|false}>
         <keep_permutation={true|false}>
 2. One predictor matrix:
+
 java -jar /path/to/code/CNet.jar model=chisq \
           X=BRCA.mut_raw.txt \
           Y=BRCA.Y.txt \
@@ -45,6 +51,7 @@ java -jar /path/to/code/CNet.jar model=chisq \
           keep_permutation=false \
           2>log
 3. Two predictor matrices:
+
 java -jar /home/pjia/code/CNet.jar model=chisq \
           X=BRCA.cnv_gain.txt:BRCA.cnv_loss.txt \
           Y=BRCA.CNV_Y.txt \
