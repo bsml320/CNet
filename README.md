@@ -64,6 +64,7 @@ java -jar /home/pjia/code/CNet.jar model=chisq \
           2>log
           
 In this case, the column "tag" in the output file has multiple index to indicate the dimension that the corresponding gene was selected. For example:
+
 seed_gene       module_score    component_genes tags    z_score z_score2
 PDE4B   39.43061966735023       AGA PDE4B       1 0     13.921094778202217      6.869421258373911
 
