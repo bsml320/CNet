@@ -28,6 +28,7 @@ If permutation is turned on, a file named output.modules.withZ.txt will be gener
 ### 1. Default
 
 java -jar /home/pjia/code/CNet.jar
+
 usage: java CNet <model=glm|km|chisq|FET>
         <X=Xfile>
         <Y=Yfile>
@@ -50,6 +51,7 @@ java -jar /home/pjia/code/CNet.jar model=chisq X=BRCA.cnv_gain.txt:BRCA.cnv_loss
 In this case, the column "tag" in the output file has multiple index to indicate the dimension that the corresponding gene was selected. For example:
 
 seed_gene       module_score    component_genes tags    z_score z_score2
+
 PDE4B   39.43061966735023       AGA PDE4B       1 0     13.921094778202217      6.869421258373911
 
 There are two genes (AGA and PDE4B) in this module. The tag "1 0" indicates that the first gene AGA has its best dimension in the 2nd input matrix, i.e., BRCA.cnv_loss.txt, and the second gene PDE4B has its best dimension in the 1st input matrix, i.e. BRCA.cnv_gain.txt. Here "1 0" is the index of the input matrices (started at 0).
