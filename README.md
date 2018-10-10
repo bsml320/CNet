@@ -6,7 +6,7 @@ CNet is a JAR package that detects groups of genomic signatures that are associa
 
 1. X: Predictor profile matrices: formatted as samples by genes, with only 0 and 1 allowed (i.e., binary matrix). Space seperated. 
 2. Y: Phenotype file: a file with 2 columns (continuous or categorical phenotype) or 3 columns (censored data)
-3. net: Network file: a file with 2 columns, each row with a pair of genes, space seperated. Alternatively, use the label "net=full" to refer a fully connected network.
+3. net: Network file: a file with 2 columns, each row with a pair of genes, space seperated. Alternatively, use the label "net=full" to refer a fully connected network. An example network file is available in Example/PC.interact.txt, which was prepared based on PathwayCommons binary interaction data.
 
 ## Other input parameters:
 
