@@ -60,4 +60,7 @@ There are two genes (AGA and PDE4B) in this module. The tag "1 0" indicates that
 
 ### 4. Exclude genes with extreme effect:
 > java -jar /path/to/CNet.jar model=chisq X=BRCA.mut_one.txt Y=BRCA.Y.txt net=/path/to/PC.interact.txt r_include=0.2 r_exclude=0.1 output=BRCA.mut_one.excludeTP53.modules.txt permutation=true keep_permutation=false exclude=excludeTP53.txt 2>log
+
+### 5. Selection of parameters:
+We recommend in general that r2 to be half the value of r1. In practice, r1 and r2 are set such that the resultant modules would not be too large (i.e., high false positive) or too small (i.e., high false negative). The default values apply to most applications. When many genes in the input matrix tend to have strong effect, such as applications to cancer data, a stringent set of r1/r2 can be considered, e.g., r1 = 0.4 and r2 = 0.2.
  
